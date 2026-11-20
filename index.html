@@ -1,0 +1,525 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Neil Sathwara & Ami Darji — Engagement Invitation</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400;0,6..96,600;1,6..96,400&family=Montserrat:wght@300;400;500;600&family=Pinyon+Script&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css?v=6" />
+</head>
+<body>
+
+  <!-- Background Music -->
+  <audio id="bg-music" autoplay loop preload="auto">
+    <source src="kesariya.mp3.mpeg" type="audio/mpeg" />
+    <source src="kesariya.mp3" type="audio/mpeg" />
+  </audio>
+
+  <!-- Floating Music Control -->
+  <button id="music-toggle" class="music-fab" aria-label="Toggle Background Music">
+    <span>♫</span>
+    <span id="music-label">Music</span>
+  </button>
+
+  <!-- Floating Golden Dust -->
+  <div id="ambient-layer" aria-hidden="true"></div>
+
+  <!-- ROYAL VELVET CURTAIN ENTRANCE -->
+  <div id="curtain-screen" class="curtain-screen">
+    <div class="curtain-panel left-panel"></div>
+    <div class="curtain-panel right-panel"></div>
+
+    <div class="curtain-center">
+      <div class="arch-badge">
+        <span class="sanskrit">|| श्री गणेशाय नमः ||</span>
+        <div class="monogram-crest">
+          <span>N</span>
+          <small>&</small>
+          <span>A</span>
+        </div>
+        <p class="curtain-invite-to">Personal Invitation For</p>
+        <p class="curtain-guest-name" id="curtain-guest-name">Dear Family & Friends</p>
+        <p class="curtain-date">03 • 12 • 2026</p>
+        <button id="enter-btn" class="royal-btn">Open Invitation</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- PRIVATE HOST LINK GENERATOR (Open with ?host=1) -->
+  <section id="host-panel" class="host-panel" hidden>
+    <div class="host-box">
+      <h3>Host Link Generator (Private)</h3>
+      <p>Type a relative's name to create a personal link where they only see their own name.</p>
+      <div class="host-controls">
+        <input type="text" id="host-guest-input" placeholder="e.g., Rameshbhai Patel & Family" />
+        <button id="gen-copy-btn" class="royal-btn small" type="button">Copy Link</button>
+        <button id="gen-wa-btn" class="outline-gold-btn" type="button">Send on WhatsApp</button>
+      </div>
+      <p id="host-output" class="host-output"></p>
+    </div>
+  </section>
+
+  <!-- MAIN EDITORIAL INVITATION -->
+  <main class="page-wrapper">
+
+    <!-- HERO SECTION -->
+    <header class="hero-section">
+      <div class="hero-backdrop" id="hero-backdrop"></div>
+      <div class="hero-inner reveal">
+        <p class="top-mantra">|| Shree Ganeshay Namah ||</p>
+
+        <div class="guest-welcome-pill">
+          <span>Cordially Inviting</span>
+          <strong id="hero-guest-name">Dear Family & Friends</strong>
+        </div>
+
+        <div class="jharokha-frame">
+          <img
+            src="image 2.jpeg"
+            data-alt-ext="image 2.jpg"
+            alt="Neil Sathwara and Ami Darji"
+            class="hero-photo smart-img"
+          />
+        </div>
+
+        <h1 class="couple-title">
+          <span class="first-name">Neil</span>
+          <span class="surname">Sathwara</span>
+          <span class="ampersand">&</span>
+          <span class="first-name">Ami</span>
+          <span class="surname">Darji</span>
+        </h1>
+
+        <p class="invite-message">
+          With the blessings of our elders and the love of our families,<br />
+          we warmly invite <strong id="inline-guest-name">you</strong> to grace the auspicious occasion of our
+        </p>
+
+        <div class="event-pill">Engagement Ceremony</div>
+        <p class="hero-date-line">Thursday, 3rd December 2026  •  6:00 PM Onwards</p>
+      </div>
+    </header>
+
+    <!-- LIVE COUNTDOWN SECTION -->
+    <section class="section countdown-section reveal">
+      <span class="section-kicker">Save The Date</span>
+      <h2 class="section-heading">Counting Every Moment</h2>
+      <div class="ornament-divider"><span>✦</span></div>
+
+      <div class="countdown-wrapper" id="countdown">
+        <div class="count-card">
+          <span class="count-num" id="cd-days">00</span>
+          <span class="count-label">Days</span>
+        </div>
+        <div class="count-card">
+          <span class="count-num" id="cd-hours">00</span>
+          <span class="count-label">Hours</span>
+        </div>
+        <div class="count-card">
+          <span class="count-num" id="cd-minutes">00</span>
+          <span class="count-label">Minutes</span>
+        </div>
+        <div class="count-card">
+          <span class="count-num" id="cd-seconds">00</span>
+          <span class="count-label">Seconds</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- 3D ROYAL PHOTO SHOWCASE -->
+    <section class="section gallery-section reveal">
+      <span class="section-kicker">Captured Moments</span>
+      <h2 class="section-heading">Neil & Ami</h2>
+      <div class="ornament-divider"><span>✦</span></div>
+      <p class="section-desc">Swipe or tap the cards • Tap center photo for full screen</p>
+
+      <div class="deck-stage" id="deck-stage">
+        <div class="deck-track" id="deck-track">
+          <article class="deck-card" data-caption="Under the festive lights">
+            <img src="image 1.jpeg" data-alt-ext="image 1.jpg" alt="Neil and Ami looking at each other" class="smart-img pos-top" />
+            <div class="deck-caption">
+              <span class="cap-num">01</span>
+              <p>Under the festive lights</p>
+            </div>
+          </article>
+
+          <article class="deck-card" data-caption="Two hearts, one story">
+            <img src="image 2.jpeg" data-alt-ext="image 2.jpg" alt="Neil and Ami smiling" class="smart-img pos-top" />
+            <div class="deck-caption">
+              <span class="cap-num">02</span>
+              <p>Two hearts, one story</p>
+            </div>
+          </article>
+
+          <article class="deck-card" data-caption="Forever begins with a smile">
+            <img src="image 3.jpeg" data-alt-ext="image 3.jpg" alt="Neil and Ami hugging" class="smart-img pos-top" />
+            <div class="deck-caption">
+              <span class="cap-num">03</span>
+              <p>Forever begins with a smile</p>
+            </div>
+          </article>
+
+          <article class="deck-card" data-caption="Walking into our new chapter">
+            <img src="image 4.jpeg" data-alt-ext="image 4.jpg" alt="Neil and Ami in the garden" class="smart-img pos-mid" />
+            <div class="deck-caption">
+              <span class="cap-num">04</span>
+              <p>Walking into our new chapter</p>
+            </div>
+          </article>
+
+          <article class="deck-card" data-caption="A quiet moment together">
+            <img src="image 5.jpeg" data-alt-ext="image 5.jpg" alt="Neil and Ami looking at each other in garden" class="smart-img pos-top" />
+            <div class="deck-caption">
+              <span class="cap-num">05</span>
+              <p>A quiet moment together</p>
+            </div>
+          </article>
+        </div>
+
+        <!-- Navigation Arrows & Dots -->
+        <div class="deck-controls">
+          <button id="deck-prev" class="deck-nav-btn" aria-label="Previous Photo">←</button>
+          <div class="deck-dots" id="deck-dots"></div>
+          <button id="deck-next" class="deck-nav-btn" aria-label="Next Photo">→</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- DATE & VENUE DETAILS -->
+    <section class="section details-section reveal">
+      <span class="section-kicker">When & Where</span>
+      <h2 class="section-heading">Ceremony Details</h2>
+      <div class="ornament-divider"><span>✦</span></div>
+
+      <div class="luxury-grid">
+        <div class="glass-card">
+          <span class="card-tag">Date & Day</span>
+          <h3>3rd December 2026</h3>
+          <p>Thursday Evening</p>
+        </div>
+        <div class="glass-card">
+          <span class="card-tag">Time</span>
+          <h3>6:00 PM Onwards</h3>
+          <p>Auspicious Engagement Evening</p>
+        </div>
+        <div class="glass-card span-2">
+          <span class="card-tag">Venue</span>
+          <h3>The Royal Heritage Banquet & Lawns</h3>
+          <p>S.G. Highway, Ahmedabad, Gujarat</p>
+          <div class="btn-group">
+            <a
+              href="https://maps.google.com/?q=SG+Highway+Ahmedabad+Gujarat"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="outline-gold-btn"
+            >
+              Get Directions
+            </a>
+            <button id="ics-btn" class="outline-gold-btn" type="button">
+              Add to Calendar
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="luxury-footer reveal">
+      <p class="footer-script">Neil & Ami</p>
+      <p class="footer-sub">Sathwara Family  •  Darji Family</p>
+      <p class="footer-note">Your presence and blessings are the greatest gift to us.</p>
+    </footer>
+  </main>
+
+  <!-- FULLSCREEN PHOTO LIGHTBOX -->
+  <div id="lightbox" class="lightbox" aria-hidden="true">
+    <button id="lightbox-close" class="lightbox-close" aria-label="Close">×</button>
+    <img id="lightbox-img" src="" alt="Full view" />
+    <p id="lightbox-caption"></p>
+  </div>
+
+  <script>
+    // 1. Auto-fallback for .jpeg vs .jpg
+    document.querySelectorAll('.smart-img').forEach((img) => {
+      img.addEventListener('error', function () {
+        const altSrc = this.getAttribute('data-alt-ext');
+        if (altSrc && !this.dataset.triedAlt) {
+          this.dataset.triedAlt = 'true';
+          this.src = altSrc;
+          if (this.classList.contains('hero-photo')) {
+            document.getElementById('hero-backdrop').style.backgroundImage = `url('${altSrc}')`;
+          }
+        }
+      });
+    });
+
+    // 2. Personalize Invitation (?guest=Name)
+    const params = new URLSearchParams(window.location.search);
+    const rawGuest = params.get('guest');
+    const guestName = rawGuest ? rawGuest.trim() : '';
+
+    if (guestName) {
+      document.getElementById('curtain-guest-name').textContent = guestName;
+      document.getElementById('hero-guest-name').textContent = guestName;
+      document.getElementById('inline-guest-name').textContent = guestName;
+      document.title = `Invitation for ${guestName} — Neil & Ami`;
+    }
+
+    // 3. Private Host Link Generator (?host=1)
+    if (params.get('host') === '1') {
+      document.getElementById('host-panel').hidden = false;
+      const hostInput = document.getElementById('host-guest-input');
+      const hostOutput = document.getElementById('host-output');
+
+      function buildGuestLink(name) {
+        const base = window.location.origin + window.location.pathname;
+        return `${base}?guest=${encodeURIComponent(name)}`;
+      }
+
+      document.getElementById('gen-copy-btn').addEventListener('click', async () => {
+        const name = hostInput.value.trim();
+        if (!name) return (hostOutput.textContent = 'Please enter a relative name first.');
+        const link = buildGuestLink(name);
+        try {
+          await navigator.clipboard.writeText(link);
+          hostOutput.textContent = `Copied link for ${name}: ${link}`;
+        } catch {
+          hostOutput.textContent = link;
+        }
+      });
+
+      document.getElementById('gen-wa-btn').addEventListener('click', () => {
+        const name = hostInput.value.trim();
+        if (!name) return (hostOutput.textContent = 'Please enter a relative name first.');
+        const link = buildGuestLink(name);
+        const msg =
+          `|| Shree Ganeshay Namah ||\n\n` +
+          `Dear ${name},\n` +
+          `We warmly invite you to the Engagement Ceremony of *Neil Sathwara & Ami Darji* on *3rd December 2026*.\n\n` +
+          `Open your personal invitation here:\n${link}`;
+        window.open(`https://wa.me/?text=${encodeURIComponent(msg)}`, '_blank');
+      });
+    }
+
+    // 4. Instant Background Music Autoplay (+ First-Touch Fallback)
+    const bgMusic = document.getElementById('bg-music');
+    const musicToggle = document.getElementById('music-toggle');
+    const musicLabel = document.getElementById('music-label');
+    let isPlaying = false;
+
+    function startMusic() {
+      bgMusic.volume = 0.6;
+      const playPromise = bgMusic.play();
+      if (playPromise !== undefined) {
+        playPromise.then(() => {
+          isPlaying = true;
+          musicToggle.classList.add('playing');
+          musicLabel.textContent = 'Pause';
+          removeAutoplayUnlock();
+        }).catch(() => {
+          musicLabel.textContent = 'Play';
+        });
+      }
+    }
+
+    function unlockOnFirstInteraction() {
+      if (!isPlaying) startMusic();
+    }
+
+    function removeAutoplayUnlock() {
+      ['click', 'touchstart', 'pointerdown', 'keydown'].forEach((evt) => {
+        document.removeEventListener(evt, unlockOnFirstInteraction);
+      });
+    }
+
+    window.addEventListener('DOMContentLoaded', startMusic);
+    window.addEventListener('load', startMusic);
+    ['click', 'touchstart', 'pointerdown', 'keydown'].forEach((evt) => {
+      document.addEventListener(evt, unlockOnFirstInteraction, { once: true });
+    });
+
+    musicToggle.addEventListener('click', (e) => {
+      e.stopPropagation();
+      if (isPlaying) {
+        bgMusic.pause();
+        isPlaying = false;
+        musicToggle.classList.remove('playing');
+        musicLabel.textContent = 'Play';
+      } else {
+        startMusic();
+      }
+    });
+
+    // 5. Curtain Opening
+    const curtain = document.getElementById('curtain-screen');
+    document.getElementById('enter-btn').addEventListener('click', () => {
+      curtain.classList.add('open');
+      if (!isPlaying) startMusic();
+      spawnBurst(24);
+      setTimeout(() => (curtain.style.display = 'none'), 1400);
+    });
+
+    // 6. Ambient Golden Dust
+    const ambientLayer = document.getElementById('ambient-layer');
+    function createParticle(fast = false) {
+      const dot = document.createElement('span');
+      dot.className = 'gold-dust';
+      const size = 2.5 + Math.random() * 4.5;
+      dot.style.width = size + 'px';
+      dot.style.height = size + 'px';
+      dot.style.left = Math.random() * 100 + 'vw';
+      dot.style.animationDuration = (fast ? 3 + Math.random() * 3 : 7 + Math.random() * 7) + 's';
+      dot.style.opacity = (0.3 + Math.random() * 0.6).toFixed(2);
+      ambientLayer.appendChild(dot);
+      setTimeout(() => dot.remove(), 14000);
+    }
+    function spawnBurst(n) {
+      for (let i = 0; i < n; i++) setTimeout(() => createParticle(true), i * 40);
+    }
+    setInterval(() => createParticle(false), 500);
+
+    // 7. Live Countdown (3rd December 2026, 6:00 PM IST)
+    const targetTime = new Date('2026-12-03T18:00:00+05:30').getTime();
+    function tickCountdown() {
+      const diff = Math.max(0, targetTime - Date.now());
+      document.getElementById('cd-days').textContent = String(Math.floor(diff / 86400000)).padStart(2, '0');
+      document.getElementById('cd-hours').textContent = String(Math.floor((diff / 3600000) % 24)).padStart(2, '0');
+      document.getElementById('cd-minutes').textContent = String(Math.floor((diff / 60000) % 60)).padStart(2, '0');
+      document.getElementById('cd-seconds').textContent = String(Math.floor((diff / 1000) % 60)).padStart(2, '0');
+    }
+    tickCountdown();
+    setInterval(tickCountdown, 1000);
+
+    // 8. 3D Royal Coverflow Photo Deck + Touch Swipe + Lightbox
+    const cards = Array.from(document.querySelectorAll('.deck-card'));
+    const dotsContainer = document.getElementById('deck-dots');
+    const lightbox = document.getElementById('lightbox');
+    const lbImg = document.getElementById('lightbox-img');
+    const lbCap = document.getElementById('lightbox-caption');
+    let currentIdx = 1; // Start on photo 2 (smiling under lights)
+    let autoSlideTimer;
+
+    // Build indicator dots
+    cards.forEach((_, idx) => {
+      const dot = document.createElement('button');
+      dot.className = 'deck-dot';
+      dot.setAttribute('aria-label', `Photo ${idx + 1}`);
+      dot.addEventListener('click', () => {
+        currentIdx = idx;
+        updateDeck();
+        resetAutoSlide();
+      });
+      dotsContainer.appendChild(dot);
+    });
+    const dots = Array.from(dotsContainer.querySelectorAll('.deck-dot'));
+
+    function updateDeck() {
+      const total = cards.length;
+      cards.forEach((card, i) => {
+        card.className = 'deck-card';
+        const offset = (i - currentIdx + total) % total;
+        if (offset === 0) {
+          card.classList.add('active');
+        } else if (offset === 1) {
+          card.classList.add('next');
+        } else if (offset === total - 1) {
+          card.classList.add('prev');
+        } else if (offset === 2) {
+          card.classList.add('far-next');
+        } else {
+          card.classList.add('far-prev');
+        }
+      });
+      dots.forEach((d, i) => d.classList.toggle('active', i === currentIdx));
+    }
+
+    function nextCard() {
+      currentIdx = (currentIdx + 1) % cards.length;
+      updateDeck();
+    }
+
+    function prevCard() {
+      currentIdx = (currentIdx - 1 + cards.length) % cards.length;
+      updateDeck();
+    }
+
+    function resetAutoSlide() {
+      clearInterval(autoSlideTimer);
+      autoSlideTimer = setInterval(nextCard, 4200);
+    }
+
+    cards.forEach((card, idx) => {
+      card.addEventListener('click', () => {
+        if (idx === currentIdx) {
+          lbImg.src = card.querySelector('img').src;
+          lbCap.textContent = card.dataset.caption || '';
+          lightbox.classList.add('active');
+          lightbox.setAttribute('aria-hidden', 'false');
+        } else {
+          currentIdx = idx;
+          updateDeck();
+          resetAutoSlide();
+        }
+      });
+    });
+
+    document.getElementById('deck-next').addEventListener('click', () => { nextCard(); resetAutoSlide(); });
+    document.getElementById('deck-prev').addEventListener('click', () => { prevCard(); resetAutoSlide(); });
+
+    // Touch swipe support for phones
+    let touchStartX = 0;
+    const deckStage = document.getElementById('deck-stage');
+    deckStage.addEventListener('touchstart', (e) => { touchStartX = e.changedTouches[0].screenX; }, { passive: true });
+    deckStage.addEventListener('touchend', (e) => {
+      const diff = e.changedTouches[0].screenX - touchStartX;
+      if (Math.abs(diff) > 40) {
+        diff < 0 ? nextCard() : prevCard();
+        resetAutoSlide();
+      }
+    }, { passive: true });
+
+    updateDeck();
+    resetAutoSlide();
+
+    function closeLightbox() {
+      lightbox.classList.remove('active');
+      lightbox.setAttribute('aria-hidden', 'true');
+    }
+    document.getElementById('lightbox-close').addEventListener('click', closeLightbox);
+    lightbox.addEventListener('click', (e) => e.target === lightbox && closeLightbox());
+
+    // 9. Add to Calendar (.ICS)
+    document.getElementById('ics-btn').addEventListener('click', () => {
+      const ics = [
+        'BEGIN:VCALENDAR',
+        'VERSION:2.0',
+        'PRODID:-//Neil & Ami Engagement//EN',
+        'BEGIN:VEVENT',
+        'DTSTART:20261203T123000Z',
+        'DTEND:20261203T173000Z',
+        'SUMMARY:Engagement Ceremony — Neil Sathwara & Ami Darji',
+        'DESCRIPTION:Engagement Ceremony of Neil Sathwara & Ami Darji.',
+        'LOCATION:The Royal Heritage Banquet & Lawns, S.G. Highway, Ahmedabad, Gujarat',
+        'END:VEVENT',
+        'END:VCALENDAR'
+      ].join('\r\n');
+      const blob = new Blob([ics], { type: 'text/calendar;charset=utf-8' });
+      const url = URL.createObjectURL(blob);
+      const a = document.createElement('a');
+      a.href = url;
+      a.download = 'Neil-and-Ami-Engagement.ics';
+      a.click();
+      URL.revokeObjectURL(url);
+    });
+
+    // 10. Scroll Reveal
+    const obs = new IntersectionObserver(
+      (entries) => entries.forEach((e) => e.isIntersecting && e.target.classList.add('in-view')),
+      { threshold: 0.12 }
+    );
+    document.querySelectorAll('.reveal').forEach((el) => obs.observe(el));
+  </script>
+</body>
+</html>
