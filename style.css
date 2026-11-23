@@ -1,5 +1,5 @@
 /* =========================================================
-   NEIL SATHWARA & AMI DARJI — ROYAL EDITORIAL + 3D DECK
+   DR. NEIL SATHWARA & DR. AMI DARJI — ROYAL 9-PHOTO DECK
    ========================================================= */
 
 :root {
@@ -521,7 +521,7 @@ body {
 }
 
 /* =========================================================
-   3D ROYAL COVERFLOW PHOTO DECK
+   3D ROYAL COVERFLOW PHOTO DECK (9 PHOTOS, NO OVERLAP)
    ========================================================= */
 .deck-stage {
   position: relative;
@@ -539,6 +539,7 @@ body {
   justify-content: center;
 }
 
+/* Hidden by default so non-visible cards never overlap or repeat */
 .deck-card {
   position: absolute;
   width: 310px;
@@ -549,6 +550,10 @@ body {
   background: #041010;
   box-shadow: 0 22px 50px rgba(0, 0, 0, 0.7);
   cursor: pointer;
+  opacity: 0;
+  pointer-events: none;
+  transform: translateX(0) scale(0.5);
+  z-index: 1;
   transition: transform 0.75s cubic-bezier(0.22, 1, 0.36, 1), opacity 0.65s ease, filter 0.65s ease, border-color 0.5s ease;
   user-select: none;
 }
@@ -591,8 +596,9 @@ body {
 
 .deck-card.active {
   z-index: 5;
-  transform: translateX(0) scale(1) rotateY(0deg);
   opacity: 1;
+  pointer-events: auto;
+  transform: translateX(0) scale(1) rotateY(0deg);
   filter: brightness(1.03);
   border-color: var(--gold-bright);
   box-shadow: 0 28px 65px rgba(0, 0, 0, 0.8), 0 0 32px rgba(212, 175, 55, 0.22);
@@ -602,29 +608,33 @@ body {
 
 .deck-card.prev {
   z-index: 4;
-  transform: translateX(-230px) scale(0.82) rotateY(22deg);
   opacity: 0.72;
+  pointer-events: auto;
+  transform: translateX(-230px) scale(0.82) rotateY(22deg);
   filter: brightness(0.65);
 }
 
 .deck-card.next {
   z-index: 4;
-  transform: translateX(230px) scale(0.82) rotateY(-22deg);
   opacity: 0.72;
+  pointer-events: auto;
+  transform: translateX(230px) scale(0.82) rotateY(-22deg);
   filter: brightness(0.65);
 }
 
 .deck-card.far-prev {
   z-index: 2;
-  transform: translateX(-410px) scale(0.66) rotateY(32deg);
   opacity: 0.28;
+  pointer-events: auto;
+  transform: translateX(-410px) scale(0.66) rotateY(32deg);
   filter: brightness(0.45);
 }
 
 .deck-card.far-next {
   z-index: 2;
-  transform: translateX(410px) scale(0.66) rotateY(-32deg);
   opacity: 0.28;
+  pointer-events: auto;
+  transform: translateX(410px) scale(0.66) rotateY(-32deg);
   filter: brightness(0.45);
 }
 
@@ -634,6 +644,19 @@ body {
   justify-content: center;
   gap: 1.25rem;
   margin-top: 1.6rem;
+}
+
+.deck-status {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.45rem;
+}
+
+.deck-counter {
+  font-size: 0.72rem;
+  letter-spacing: 2.5px;
+  color: var(--gold-bright);
 }
 
 .deck-nav-btn {
@@ -650,11 +673,11 @@ body {
 
 .deck-nav-btn:hover { background: rgba(212, 175, 55, 0.2); transform: scale(1.06); }
 
-.deck-dots { display: flex; gap: 0.55rem; }
+.deck-dots { display: flex; gap: 0.45rem; }
 
 .deck-dot {
-  width: 8px;
-  height: 8px;
+  width: 7px;
+  height: 7px;
   border-radius: 999px;
   border: none;
   background: rgba(212, 175, 55, 0.3);
@@ -662,7 +685,7 @@ body {
   transition: width 0.3s ease, background 0.3s ease;
 }
 
-.deck-dot.active { width: 24px; background: var(--gold-bright); }
+.deck-dot.active { width: 22px; background: var(--gold-bright); }
 
 /* =========================================================
    DETAILS, BLESSINGS, FOOTER & LIGHTBOX
