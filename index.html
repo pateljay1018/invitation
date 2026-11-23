@@ -7,9 +7,12 @@
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400;0,6..96,600;1,6..96,400&family=Montserrat:wght@300;400;500;600&family=Pinyon+Script&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="style.css?v=6" />
+  <link rel="stylesheet" href="style.css?v=8" />
 </head>
 <body>
+
+  <!-- Realistic 3D Flower Petal Shower Canvas -->
+  <canvas id="petal-canvas" aria-hidden="true"></canvas>
 
   <!-- Background Music -->
   <audio id="bg-music" autoplay loop preload="auto">
@@ -98,7 +101,7 @@
         </p>
 
         <div class="event-pill">God Dhana Ceremony</div>
-        <p class="hero-date-line">Thursday, 3rd December 2026  •  6:00 PM Onwards</p>
+        <p class="hero-date-line">Thursday, 3rd December 2026  •  10:00 AM Onwards</p>
       </div>
     </header>
 
@@ -138,7 +141,7 @@
       <div class="deck-stage" id="deck-stage">
         <div class="deck-track" id="deck-track">
           <article class="deck-card" data-caption="Under the festive lights">
-            <img src="image 1.jpeg" data-alt-ext="image 1.jpg" alt="Neil and Ami looking at each other" class="smart-img pos-top" />
+            <img src="image 1.jpeg" data-alt-ext="image 1.jpg" alt="Neil and Ami smiling together" class="smart-img pos-top" />
             <div class="deck-caption">
               <span class="cap-num">01</span>
               <p>Under the festive lights</p>
@@ -146,7 +149,7 @@
           </article>
 
           <article class="deck-card" data-caption="Two hearts, one story">
-            <img src="image 2.jpeg" data-alt-ext="image 2.jpg" alt="Neil and Ami smiling" class="smart-img pos-top" />
+            <img src="image 2.jpeg" data-alt-ext="image 2.jpg" alt="Neil and Ami looking at each other" class="smart-img pos-top" />
             <div class="deck-caption">
               <span class="cap-num">02</span>
               <p>Two hearts, one story</p>
@@ -154,26 +157,26 @@
           </article>
 
           <article class="deck-card" data-caption="Forever begins with a smile">
-            <img src="image 3.jpeg" data-alt-ext="image 3.jpg" alt="Neil and Ami hugging" class="smart-img pos-top" />
+            <img src="image 3.jpeg" data-alt-ext="image 3.jpg" alt="Neil and Ami together" class="smart-img pos-top" />
             <div class="deck-caption">
               <span class="cap-num">03</span>
               <p>Forever begins with a smile</p>
             </div>
           </article>
 
-          <article class="deck-card" data-caption="Walking into our new chapter">
-            <img src="image 4.jpeg" data-alt-ext="image 4.jpg" alt="Neil and Ami in the garden" class="smart-img pos-mid" />
+          <article class="deck-card" data-caption="Warm evenings & endless talks">
+            <img src="image 4.jpeg" data-alt-ext="image 4.jpg" alt="Neil and Ami selfie" class="smart-img pos-top" />
             <div class="deck-caption">
               <span class="cap-num">04</span>
-              <p>Walking into our new chapter</p>
+              <p>Warm evenings & endless talks</p>
             </div>
           </article>
 
-          <article class="deck-card" data-caption="A quiet moment together">
-            <img src="image 5.jpeg" data-alt-ext="image 5.jpg" alt="Neil and Ami looking at each other in garden" class="smart-img pos-top" />
+          <article class="deck-card" data-caption="Walking into our new chapter">
+            <img src="image 5.jpeg" data-alt-ext="image 5.jpg" alt="Neil and Ami in the garden" class="smart-img pos-mid" />
             <div class="deck-caption">
               <span class="cap-num">05</span>
-              <p>A quiet moment together</p>
+              <p>Walking into our new chapter</p>
             </div>
           </article>
         </div>
@@ -197,20 +200,20 @@
         <div class="glass-card">
           <span class="card-tag">Date & Day</span>
           <h3>3rd December 2026</h3>
-          <p>Thursday Evening</p>
+          <p>Thursday Morning</p>
         </div>
         <div class="glass-card">
           <span class="card-tag">Time</span>
-          <h3>6:00 PM Onwards</h3>
-          <p>Auspicious God Dhana Evening</p>
+          <h3>10:00 AM Onwards</h3>
+          <p>Auspicious God Dhana Morning</p>
         </div>
         <div class="glass-card span-2">
           <span class="card-tag">Venue</span>
-          <h3>The Royal Heritage Banquet & Lawns</h3>
-          <p>S.G. Highway, Ahmedabad, Gujarat</p>
+          <h3>Mehdav</h3>
+          <p>Gujarat, India</p>
           <div class="btn-group">
             <a
-              href="https://maps.google.com/?q=SG+Highway+Ahmedabad+Gujarat"
+              href="https://maps.google.com/?q=Mehdav,Gujarat"
               target="_blank"
               rel="noopener noreferrer"
               class="outline-gold-btn"
@@ -223,6 +226,23 @@
           </div>
         </div>
       </div>
+    </section>
+
+    <!-- SHOWER BLESSINGS (PUSHPA VARSHA) -->
+    <section class="section blessings-section reveal">
+      <span class="section-kicker">Pushpa Varsha</span>
+      <h2 class="section-heading">Shower Your Blessings</h2>
+      <div class="ornament-divider"><span>✦</span></div>
+      <p class="section-desc">Tap below to shower rose & marigold petals upon Neil & Ami.</p>
+
+      <button id="bless-btn" class="royal-btn bless-btn" type="button">
+        <svg class="bless-icon" viewBox="0 0 24 24" width="16" height="16" fill="currentColor" aria-hidden="true">
+          <path d="M12 2C9.5 6 7 9.5 7 13a5 5 0 0 0 10 0c0-3.5-2.5-7-5-11zm0 14.5A2.5 2.5 0 0 1 9.5 14c0-1.6 1.1-3.6 2.5-5.6 1.4 2 2.5 4 2.5 5.6a2.5 2.5 0 0 1-2.5 2.5z"/>
+        </svg>
+        Shower Blessings
+      </button>
+
+      <p id="bless-msg" class="bless-msg" aria-live="polite"></p>
     </section>
 
     <!-- FOOTER -->
@@ -241,7 +261,146 @@
   </div>
 
   <script>
-    // 1. Auto-fallback for .jpeg vs .jpg
+    // =========================================================
+    // 1. REALISTIC 3D FLOWER PETAL CANVAS ENGINE
+    // =========================================================
+    const petalCanvas = document.getElementById('petal-canvas');
+    const pCtx = petalCanvas.getContext('2d');
+    let activePetals = [];
+    let petalAnimId = null;
+
+    function resizePetalCanvas() {
+      const dpr = Math.min(window.devicePixelRatio || 1, 2);
+      petalCanvas.width = window.innerWidth * dpr;
+      petalCanvas.height = window.innerHeight * dpr;
+      pCtx.setTransform(dpr, 0, 0, dpr, 0, 0);
+    }
+    resizePetalCanvas();
+    window.addEventListener('resize', resizePetalCanvas);
+
+    // Rich realistic palettes: velvet crimson rose, blush rose, marigold saffron, antique gold leaf
+    const petalPalettes = [
+      { type: 'rose',     light: '#e03e52', mid: '#a8132b', dark: '#5e0615' },
+      { type: 'rose',     light: '#c92a42', mid: '#8b0d21', dark: '#4a0410' },
+      { type: 'blush',    light: '#f7b2bd', mid: '#d96c80', dark: '#8c2d42' },
+      { type: 'marigold', light: '#ffb703', mid: '#e87a00', dark: '#9c4200' },
+      { type: 'marigold', light: '#ff9e00', mid: '#d95d00', dark: '#802b00' },
+      { type: 'gold',     light: '#fff4c2', mid: '#d4af37', dark: '#8a6b15' }
+    ];
+
+    class RealisticPetal {
+      constructor(delayY = 0) {
+        this.palette = petalPalettes[Math.floor(Math.random() * petalPalettes.length)];
+        this.x = Math.random() * window.innerWidth;
+        this.y = -30 - Math.random() * 260 - delayY;
+        this.size = this.palette.type === 'gold'
+          ? 5 + Math.random() * 6
+          : 11 + Math.random() * 14;
+        this.vy = 1.15 + Math.random() * 1.9;
+        this.vx = (Math.random() - 0.5) * 0.9;
+        this.angle = Math.random() * Math.PI * 2;
+        this.spin = (Math.random() - 0.5) * 0.045;
+        this.flip = Math.random() * Math.PI * 2;
+        this.flipSpeed = 0.025 + Math.random() * 0.045;
+        this.swayPhase = Math.random() * Math.PI * 2;
+        this.swayAmp = 0.4 + Math.random() * 1.1;
+        this.opacity = 0.78 + Math.random() * 0.22;
+      }
+
+      update() {
+        this.swayPhase += 0.02;
+        this.y += this.vy;
+        this.x += this.vx + Math.sin(this.swayPhase) * this.swayAmp;
+        this.angle += this.spin;
+        this.flip += this.flipSpeed;
+
+        // Soft fade out near the bottom
+        if (this.y > window.innerHeight - 120) {
+          this.opacity = Math.max(0, this.opacity - 0.015);
+        }
+      }
+
+      draw(ctx) {
+        if (this.opacity <= 0) return;
+        ctx.save();
+        ctx.translate(this.x, this.y);
+        ctx.rotate(this.angle);
+
+        // 3D tumbling perspective
+        const scaleX = Math.cos(this.flip);
+        const scaleY = 0.65 + 0.35 * Math.sin(this.flip * 0.7);
+        ctx.scale(scaleX, scaleY);
+        ctx.globalAlpha = this.opacity;
+
+        const s = this.size;
+        const grad = ctx.createRadialGradient(-s * 0.2, -s * 0.25, s * 0.08, 0, 0, s * 1.15);
+        grad.addColorStop(0, this.palette.light);
+        grad.addColorStop(0.55, this.palette.mid);
+        grad.addColorStop(1, this.palette.dark);
+
+        ctx.fillStyle = grad;
+        ctx.beginPath();
+
+        if (this.palette.type === 'gold') {
+          // Delicate irregular gold-leaf flake
+          ctx.moveTo(0, -s);
+          ctx.lineTo(s * 0.75, -s * 0.2);
+          ctx.lineTo(s * 0.4, s * 0.85);
+          ctx.lineTo(-s * 0.65, s * 0.35);
+          ctx.closePath();
+        } else if (this.palette.type === 'marigold') {
+          // Elongated fluted marigold petal
+          ctx.moveTo(0, s * 0.9);
+          ctx.bezierCurveTo(-s * 0.75, s * 0.3, -s * 0.65, -s * 0.85, 0, -s);
+          ctx.bezierCurveTo(s * 0.65, -s * 0.85, s * 0.75, s * 0.3, 0, s * 0.9);
+        } else {
+          // Organic velvety rose petal with soft natural cleft
+          ctx.moveTo(0, s * 0.85);
+          ctx.bezierCurveTo(-s * 1.15, s * 0.35, -s * 1.05, -s * 0.95, -s * 0.12, -s * 0.82);
+          ctx.quadraticCurveTo(0, -s * 0.62, s * 0.12, -s * 0.82);
+          ctx.bezierCurveTo(s * 1.05, -s * 0.95, s * 1.15, s * 0.35, 0, s * 0.85);
+        }
+
+        ctx.fill();
+
+        // Subtle satin highlight along the petal edge
+        ctx.strokeStyle = 'rgba(255, 240, 220, 0.18)';
+        ctx.lineWidth = 0.6;
+        ctx.stroke();
+
+        ctx.restore();
+      }
+    }
+
+    function animatePetals() {
+      pCtx.clearRect(0, 0, window.innerWidth, window.innerHeight);
+      for (let i = activePetals.length - 1; i >= 0; i--) {
+        const p = activePetals[i];
+        p.update();
+        p.draw(pCtx);
+        if (p.y > window.innerHeight + 50 || p.opacity <= 0) {
+          activePetals.splice(i, 1);
+        }
+      }
+      if (activePetals.length > 0) {
+        petalAnimId = requestAnimationFrame(animatePetals);
+      } else {
+        petalAnimId = null;
+      }
+    }
+
+    function triggerFlowerShower(count = 85) {
+      for (let i = 0; i < count; i++) {
+        activePetals.push(new RealisticPetal(i * 4.5));
+      }
+      if (!petalAnimId) {
+        petalAnimId = requestAnimationFrame(animatePetals);
+      }
+    }
+
+    // =========================================================
+    // 2. AUTO-FALLBACK FOR .JPEG VS .JPG
+    // =========================================================
     document.querySelectorAll('.smart-img').forEach((img) => {
       img.addEventListener('error', function () {
         const altSrc = this.getAttribute('data-alt-ext');
@@ -255,7 +414,9 @@
       });
     });
 
-    // 2. Personalize Invitation (?guest=Name)
+    // =========================================================
+    // 3. PERSONALIZE INVITATION (?guest=Name)
+    // =========================================================
     const params = new URLSearchParams(window.location.search);
     const rawGuest = params.get('guest');
     const guestName = rawGuest ? rawGuest.trim() : '';
@@ -267,7 +428,9 @@
       document.title = `Invitation for ${guestName} — Neil & Ami`;
     }
 
-    // 3. Private Host Link Generator (?host=1)
+    // =========================================================
+    // 4. PRIVATE HOST LINK GENERATOR (?host=1)
+    // =========================================================
     if (params.get('host') === '1') {
       document.getElementById('host-panel').hidden = false;
       const hostInput = document.getElementById('host-guest-input');
@@ -297,13 +460,15 @@
         const msg =
           `|| Shree Ganeshay Namah ||\n\n` +
           `Dear ${name},\n` +
-          `We warmly invite you to the God Dhana Ceremony of *Neil Sathwara & Ami Darji* on *3rd December 2026*.\n\n` +
+          `We warmly invite you to the God Dhana Ceremony of *Neil Sathwara & Ami Darji* on *3rd December 2026 at 10:00 AM* in *Mehdav, Gujarat*.\n\n` +
           `Open your personal invitation here:\n${link}`;
         window.open(`https://wa.me/?text=${encodeURIComponent(msg)}`, '_blank');
       });
     }
 
-    // 4. Instant Background Music Autoplay (+ First-Touch Fallback)
+    // =========================================================
+    // 5. BACKGROUND MUSIC AUTOPLAY + TOGGLE
+    // =========================================================
     const bgMusic = document.getElementById('bg-music');
     const musicToggle = document.getElementById('music-toggle');
     const musicLabel = document.getElementById('music-label');
@@ -352,16 +517,38 @@
       }
     });
 
-    // 5. Curtain Opening
+    // =========================================================
+    // 6. CURTAIN OPENING -> TRIGGERS REALISTIC FLOWER SHOWER
+    // =========================================================
     const curtain = document.getElementById('curtain-screen');
     document.getElementById('enter-btn').addEventListener('click', () => {
       curtain.classList.add('open');
       if (!isPlaying) startMusic();
-      spawnBurst(24);
+      triggerFlowerShower(95); // Lush realistic rose & marigold shower on open
+      spawnBurst(20);
       setTimeout(() => (curtain.style.display = 'none'), 1400);
     });
 
-    // 6. Ambient Golden Dust
+    // =========================================================
+    // 7. SHOWER BLESSINGS BUTTON
+    // =========================================================
+    const blessBtn = document.getElementById('bless-btn');
+    const blessMsg = document.getElementById('bless-msg');
+
+    blessBtn.addEventListener('click', () => {
+      triggerFlowerShower(75);
+      blessBtn.classList.add('blessed');
+      setTimeout(() => blessBtn.classList.remove('blessed'), 350);
+
+      blessMsg.textContent = guestName
+        ? `Thank you for your warm blessings, ${guestName}!`
+        : 'Thank you for showering your warm blessings on Neil & Ami!';
+      blessMsg.classList.add('show');
+    });
+
+    // =========================================================
+    // 8. AMBIENT GOLDEN DUST
+    // =========================================================
     const ambientLayer = document.getElementById('ambient-layer');
     function createParticle(fast = false) {
       const dot = document.createElement('span');
@@ -378,10 +565,12 @@
     function spawnBurst(n) {
       for (let i = 0; i < n; i++) setTimeout(() => createParticle(true), i * 40);
     }
-    setInterval(() => createParticle(false), 500);
+    setInterval(() => createParticle(false), 550);
 
-    // 7. Live Countdown (3rd December 2026, 6:00 PM IST)
-    const targetTime = new Date('2026-12-03T18:00:00+05:30').getTime();
+    // =========================================================
+    // 9. LIVE COUNTDOWN (3RD DECEMBER 2026, 10:00 AM IST)
+    // =========================================================
+    const targetTime = new Date('2026-12-03T10:00:00+05:30').getTime();
     function tickCountdown() {
       const diff = Math.max(0, targetTime - Date.now());
       document.getElementById('cd-days').textContent = String(Math.floor(diff / 86400000)).padStart(2, '0');
@@ -392,16 +581,17 @@
     tickCountdown();
     setInterval(tickCountdown, 1000);
 
-    // 8. 3D Royal Coverflow Photo Deck + Touch Swipe + Lightbox
+    // =========================================================
+    // 10. 3D ROYAL COVERFLOW PHOTO DECK + SWIPE + LIGHTBOX
+    // =========================================================
     const cards = Array.from(document.querySelectorAll('.deck-card'));
     const dotsContainer = document.getElementById('deck-dots');
     const lightbox = document.getElementById('lightbox');
     const lbImg = document.getElementById('lightbox-img');
     const lbCap = document.getElementById('lightbox-caption');
-    let currentIdx = 1; // Start on photo 2 (smiling under lights)
+    let currentIdx = 1;
     let autoSlideTimer;
 
-    // Build indicator dots
     cards.forEach((_, idx) => {
       const dot = document.createElement('button');
       dot.className = 'deck-dot';
@@ -420,17 +610,11 @@
       cards.forEach((card, i) => {
         card.className = 'deck-card';
         const offset = (i - currentIdx + total) % total;
-        if (offset === 0) {
-          card.classList.add('active');
-        } else if (offset === 1) {
-          card.classList.add('next');
-        } else if (offset === total - 1) {
-          card.classList.add('prev');
-        } else if (offset === 2) {
-          card.classList.add('far-next');
-        } else {
-          card.classList.add('far-prev');
-        }
+        if (offset === 0) card.classList.add('active');
+        else if (offset === 1) card.classList.add('next');
+        else if (offset === total - 1) card.classList.add('prev');
+        else if (offset === 2) card.classList.add('far-next');
+        else card.classList.add('far-prev');
       });
       dots.forEach((d, i) => d.classList.toggle('active', i === currentIdx));
     }
@@ -468,7 +652,6 @@
     document.getElementById('deck-next').addEventListener('click', () => { nextCard(); resetAutoSlide(); });
     document.getElementById('deck-prev').addEventListener('click', () => { prevCard(); resetAutoSlide(); });
 
-    // Touch swipe support for phones
     let touchStartX = 0;
     const deckStage = document.getElementById('deck-stage');
     deckStage.addEventListener('touchstart', (e) => { touchStartX = e.changedTouches[0].screenX; }, { passive: true });
@@ -490,18 +673,20 @@
     document.getElementById('lightbox-close').addEventListener('click', closeLightbox);
     lightbox.addEventListener('click', (e) => e.target === lightbox && closeLightbox());
 
-    // 9. Add to Calendar (.ICS)
+    // =========================================================
+    // 11. ADD TO CALENDAR (.ICS — 3RD DEC 2026, 10:00 AM IST)
+    // =========================================================
     document.getElementById('ics-btn').addEventListener('click', () => {
       const ics = [
         'BEGIN:VCALENDAR',
         'VERSION:2.0',
         'PRODID:-//Neil & Ami God Dhana//EN',
         'BEGIN:VEVENT',
-        'DTSTART:20261203T123000Z',
-        'DTEND:20261203T173000Z',
+        'DTSTART:20261203T043000Z',
+        'DTEND:20261203T083000Z',
         'SUMMARY:God Dhana Ceremony — Neil Sathwara & Ami Darji',
         'DESCRIPTION:God Dhana Ceremony of Neil Sathwara & Ami Darji.',
-        'LOCATION:The Royal Heritage Banquet & Lawns, S.G. Highway, Ahmedabad, Gujarat',
+        'LOCATION:Mehdav, Gujarat',
         'END:VEVENT',
         'END:VCALENDAR'
       ].join('\r\n');
@@ -509,12 +694,14 @@
       const url = URL.createObjectURL(blob);
       const a = document.createElement('a');
       a.href = url;
-      a.download = 'Neil-and-Ami-God Dhana.ics';
+      a.download = 'Neil-and-Ami-God-Dhana.ics';
       a.click();
       URL.revokeObjectURL(url);
     });
 
-    // 10. Scroll Reveal
+    // =========================================================
+    // 12. SCROLL REVEAL
+    // =========================================================
     const obs = new IntersectionObserver(
       (entries) => entries.forEach((e) => e.isIntersecting && e.target.classList.add('in-view')),
       { threshold: 0.12 }
