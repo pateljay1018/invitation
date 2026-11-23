@@ -36,6 +36,18 @@ body {
 }
 
 /* =========================================================
+   REALISTIC 3D FLOWER PETAL CANVAS
+   ========================================================= */
+#petal-canvas {
+  position: fixed;
+  inset: 0;
+  width: 100vw;
+  height: 100vh;
+  pointer-events: none;
+  z-index: 150;
+}
+
+/* =========================================================
    FLOATING MUSIC BUTTON
    ========================================================= */
 .music-fab {
@@ -577,7 +589,6 @@ body {
   color: var(--gold-bright);
 }
 
-/* 3D Deck Positions */
 .deck-card.active {
   z-index: 5;
   transform: translateX(0) scale(1) rotateY(0deg);
@@ -587,10 +598,7 @@ body {
   box-shadow: 0 28px 65px rgba(0, 0, 0, 0.8), 0 0 32px rgba(212, 175, 55, 0.22);
 }
 
-.deck-card.active .deck-caption {
-  opacity: 1;
-  transform: translateY(0);
-}
+.deck-card.active .deck-caption { opacity: 1; transform: translateY(0); }
 
 .deck-card.prev {
   z-index: 4;
@@ -620,7 +628,6 @@ body {
   filter: brightness(0.45);
 }
 
-/* Deck Controls */
 .deck-controls {
   display: flex;
   align-items: center;
@@ -641,15 +648,9 @@ body {
   transition: background 0.25s ease, transform 0.25s ease;
 }
 
-.deck-nav-btn:hover {
-  background: rgba(212, 175, 55, 0.2);
-  transform: scale(1.06);
-}
+.deck-nav-btn:hover { background: rgba(212, 175, 55, 0.2); transform: scale(1.06); }
 
-.deck-dots {
-  display: flex;
-  gap: 0.55rem;
-}
+.deck-dots { display: flex; gap: 0.55rem; }
 
 .deck-dot {
   width: 8px;
@@ -661,13 +662,10 @@ body {
   transition: width 0.3s ease, background 0.3s ease;
 }
 
-.deck-dot.active {
-  width: 24px;
-  background: var(--gold-bright);
-}
+.deck-dot.active { width: 24px; background: var(--gold-bright); }
 
 /* =========================================================
-   DETAILS, FOOTER & LIGHTBOX
+   DETAILS, BLESSINGS, FOOTER & LIGHTBOX
    ========================================================= */
 .luxury-grid {
   display: grid;
@@ -711,6 +709,31 @@ body {
   gap: 0.85rem;
   margin-top: 1.4rem;
 }
+
+.bless-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.55rem;
+  font-size: 0.82rem;
+  padding: 1rem 2.4rem;
+}
+
+.bless-btn.blessed { transform: scale(0.95); }
+
+.bless-msg {
+  margin-top: 1.4rem;
+  min-height: 1.6rem;
+  font-family: 'Bodoni Moda', serif;
+  font-style: italic;
+  font-size: 1.25rem;
+  color: var(--gold-bright);
+  opacity: 0;
+  transform: translateY(8px);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.bless-msg.show { opacity: 1; transform: translateY(0); }
 
 .luxury-footer {
   text-align: center;
@@ -805,7 +828,6 @@ body {
   .count-num { font-size: 1.65rem; }
   .count-label { font-size: 0.6rem; letter-spacing: 1px; }
 
-  /* Mobile 3D Deck Sizing */
   .deck-track { height: 390px; }
   .deck-card { width: 250px; height: 350px; border-radius: 125px 125px 18px 18px; }
   .deck-card.prev { transform: translateX(-135px) scale(0.8) rotateY(18deg); }
