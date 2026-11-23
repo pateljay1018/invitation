@@ -3,21 +3,30 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Neil Sathwara & Ami Darji — God Dhana Invitation</title>
-<!-- WhatsApp / Social Media Rich Preview Card -->
+  <title>Dr. Neil Sathwara & Dr. Ami Darji — God Dhana Invitation</title>
+
+  <!-- WhatsApp / Social Media Rich Preview Card -->
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://pateljay1018.github.io/invitation/" />
-  <meta property="og:title" content="Neil Sathwara & Ami Darji — God Dhana Invitation" />
-  <meta property="og:description" content="With the blessings of our elders, you are warmly invited to celebrate the God Dhana Ceremony on 3rd December 2026 at 10:00 AM in Mehdav, Gujarat." />
-  <meta property="og:image" content="https://pateljay1018.github.io/invitation/preview.jpeg" />
+  <meta property="og:title" content="Dr. Neil Sathwara & Dr. Ami Darji — God Dhana Invitation" />
+  <meta property="og:description" content="With the blessings of our elders, you are warmly invited to celebrate the God Dhana Ceremony of Dr. Neil Sathwara & Dr. Ami Darji on 3rd December 2026 at 10:00 AM in Mehdav, Gujarat." />
+  <meta property="og:image" content="https://pateljay1018.github.io/invitation/image%202.jpeg" />
   <meta property="og:image:type" content="image/jpeg" />
-  <meta property="og:image:width" content="1200" />
-  <meta property="og:image:height" content="1600" />
   <meta name="twitter:card" content="summary_large_image" />
+
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400;0,6..96,600;1,6..96,400&family=Montserrat:wght@300;400;500;600&family=Pinyon+Script&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="style.css?v=8" />
+  <link rel="stylesheet" href="style.css?v=9" />
+  <style>
+    /* Smoothly hides back-of-deck cards when cycling 9 photos */
+    .deck-card.hidden-card {
+      opacity: 0 !important;
+      pointer-events: none;
+      transform: translateX(0) scale(0.5);
+      z-index: 1;
+    }
+  </style>
 </head>
 <body>
 
@@ -92,16 +101,16 @@
           <img
             src="image 2.jpeg"
             data-alt-ext="image 2.jpg"
-            alt="Neil Sathwara and Ami Darji"
+            alt="Dr. Neil Sathwara and Dr. Ami Darji"
             class="hero-photo smart-img"
           />
         </div>
 
         <h1 class="couple-title">
-          <span class="first-name">Neil</span>
+          <span class="first-name">Dr. Neil</span>
           <span class="surname">Sathwara</span>
           <span class="ampersand">&</span>
-          <span class="first-name">Ami</span>
+          <span class="first-name">Dr. Ami</span>
           <span class="surname">Darji</span>
         </h1>
 
@@ -141,17 +150,17 @@
       </div>
     </section>
 
-    <!-- 3D ROYAL PHOTO SHOWCASE -->
+    <!-- 3D ROYAL PHOTO SHOWCASE (ALL 9 PHOTOS) -->
     <section class="section gallery-section reveal">
       <span class="section-kicker">Captured Moments</span>
-      <h2 class="section-heading">Neil & Ami</h2>
+      <h2 class="section-heading">Dr. Neil & Dr. Ami</h2>
       <div class="ornament-divider"><span>✦</span></div>
       <p class="section-desc">Swipe or tap the cards • Tap center photo for full screen</p>
 
       <div class="deck-stage" id="deck-stage">
         <div class="deck-track" id="deck-track">
           <article class="deck-card" data-caption="Under the festive lights">
-            <img src="image 1.jpeg" data-alt-ext="image 1.jpg" alt="Neil and Ami smiling together" class="smart-img pos-top" />
+            <img src="image 1.jpeg" data-alt-ext="image 1.jpg" alt="Dr. Neil and Dr. Ami smiling together" class="smart-img pos-top" />
             <div class="deck-caption">
               <span class="cap-num">01</span>
               <p>Under the festive lights</p>
@@ -159,7 +168,7 @@
           </article>
 
           <article class="deck-card" data-caption="Two hearts, one story">
-            <img src="image 2.jpeg" data-alt-ext="image 2.jpg" alt="Neil and Ami looking at each other" class="smart-img pos-top" />
+            <img src="image 2.jpeg" data-alt-ext="image 2.jpg" alt="Dr. Neil and Dr. Ami looking at each other" class="smart-img pos-top" />
             <div class="deck-caption">
               <span class="cap-num">02</span>
               <p>Two hearts, one story</p>
@@ -167,7 +176,7 @@
           </article>
 
           <article class="deck-card" data-caption="Forever begins with a smile">
-            <img src="image 3.jpeg" data-alt-ext="image 3.jpg" alt="Neil and Ami together" class="smart-img pos-top" />
+            <img src="image 3.jpeg" data-alt-ext="image 3.jpg" alt="Dr. Neil and Dr. Ami together" class="smart-img pos-top" />
             <div class="deck-caption">
               <span class="cap-num">03</span>
               <p>Forever begins with a smile</p>
@@ -175,7 +184,7 @@
           </article>
 
           <article class="deck-card" data-caption="Warm evenings & endless talks">
-            <img src="image 4.jpeg" data-alt-ext="image 4.jpg" alt="Neil and Ami selfie" class="smart-img pos-top" />
+            <img src="image 4.jpeg" data-alt-ext="image 4.jpg" alt="Dr. Neil and Dr. Ami selfie" class="smart-img pos-top" />
             <div class="deck-caption">
               <span class="cap-num">04</span>
               <p>Warm evenings & endless talks</p>
@@ -183,10 +192,42 @@
           </article>
 
           <article class="deck-card" data-caption="Walking into our new chapter">
-            <img src="image 5.jpeg" data-alt-ext="image 5.jpg" alt="Neil and Ami in the garden" class="smart-img pos-mid" />
+            <img src="image 5.jpeg" data-alt-ext="image 5.jpg" alt="Dr. Neil and Dr. Ami in the garden" class="smart-img pos-mid" />
             <div class="deck-caption">
               <span class="cap-num">05</span>
               <p>Walking into our new chapter</p>
+            </div>
+          </article>
+
+          <article class="deck-card" data-caption="Every moment brighter together">
+            <img src="image 6.jpeg" data-alt-ext="image 6.jpg" alt="Dr. Neil and Dr. Ami portrait 6" class="smart-img pos-top" />
+            <div class="deck-caption">
+              <span class="cap-num">06</span>
+              <p>Every moment brighter together</p>
+            </div>
+          </article>
+
+          <article class="deck-card" data-caption="Laughter, love & togetherness">
+            <img src="image 7.jpeg" data-alt-ext="image 7.jpg" alt="Dr. Neil and Dr. Ami portrait 7" class="smart-img pos-top" />
+            <div class="deck-caption">
+              <span class="cap-num">07</span>
+              <p>Laughter, love & togetherness</p>
+            </div>
+          </article>
+
+          <article class="deck-card" data-caption="Written in destiny">
+            <img src="image 8.jpeg" data-alt-ext="image 8.jpg" alt="Dr. Neil and Dr. Ami portrait 8" class="smart-img pos-top" />
+            <div class="deck-caption">
+              <span class="cap-num">08</span>
+              <p>Written in destiny</p>
+            </div>
+          </article>
+
+          <article class="deck-card" data-caption="Counting down to forever">
+            <img src="image 9.jpeg" data-alt-ext="image 9.jpg" alt="Dr. Neil and Dr. Ami portrait 9" class="smart-img pos-top" />
+            <div class="deck-caption">
+              <span class="cap-num">09</span>
+              <p>Counting down to forever</p>
             </div>
           </article>
         </div>
@@ -243,7 +284,7 @@
       <span class="section-kicker">Pushpa Varsha</span>
       <h2 class="section-heading">Shower Your Blessings</h2>
       <div class="ornament-divider"><span>✦</span></div>
-      <p class="section-desc">Tap below to shower rose & marigold petals upon Neil & Ami.</p>
+      <p class="section-desc">Tap below to shower rose & marigold petals upon Dr. Neil & Dr. Ami.</p>
 
       <button id="bless-btn" class="royal-btn bless-btn" type="button">
         <svg class="bless-icon" viewBox="0 0 24 24" width="16" height="16" fill="currentColor" aria-hidden="true">
@@ -257,7 +298,7 @@
 
     <!-- FOOTER -->
     <footer class="luxury-footer reveal">
-      <p class="footer-script">Neil & Ami</p>
+      <p class="footer-script">Dr. Neil & Dr. Ami</p>
       <p class="footer-sub">Sathwara Family  •  Darji Family</p>
       <p class="footer-note">Your presence and blessings are the greatest gift to us.</p>
     </footer>
@@ -288,7 +329,6 @@
     resizePetalCanvas();
     window.addEventListener('resize', resizePetalCanvas);
 
-    // Rich realistic palettes: velvet crimson rose, blush rose, marigold saffron, antique gold leaf
     const petalPalettes = [
       { type: 'rose',     light: '#e03e52', mid: '#a8132b', dark: '#5e0615' },
       { type: 'rose',     light: '#c92a42', mid: '#8b0d21', dark: '#4a0410' },
@@ -324,7 +364,6 @@
         this.angle += this.spin;
         this.flip += this.flipSpeed;
 
-        // Soft fade out near the bottom
         if (this.y > window.innerHeight - 120) {
           this.opacity = Math.max(0, this.opacity - 0.015);
         }
@@ -336,7 +375,6 @@
         ctx.translate(this.x, this.y);
         ctx.rotate(this.angle);
 
-        // 3D tumbling perspective
         const scaleX = Math.cos(this.flip);
         const scaleY = 0.65 + 0.35 * Math.sin(this.flip * 0.7);
         ctx.scale(scaleX, scaleY);
@@ -352,19 +390,16 @@
         ctx.beginPath();
 
         if (this.palette.type === 'gold') {
-          // Delicate irregular gold-leaf flake
           ctx.moveTo(0, -s);
           ctx.lineTo(s * 0.75, -s * 0.2);
           ctx.lineTo(s * 0.4, s * 0.85);
           ctx.lineTo(-s * 0.65, s * 0.35);
           ctx.closePath();
         } else if (this.palette.type === 'marigold') {
-          // Elongated fluted marigold petal
           ctx.moveTo(0, s * 0.9);
           ctx.bezierCurveTo(-s * 0.75, s * 0.3, -s * 0.65, -s * 0.85, 0, -s);
           ctx.bezierCurveTo(s * 0.65, -s * 0.85, s * 0.75, s * 0.3, 0, s * 0.9);
         } else {
-          // Organic velvety rose petal with soft natural cleft
           ctx.moveTo(0, s * 0.85);
           ctx.bezierCurveTo(-s * 1.15, s * 0.35, -s * 1.05, -s * 0.95, -s * 0.12, -s * 0.82);
           ctx.quadraticCurveTo(0, -s * 0.62, s * 0.12, -s * 0.82);
@@ -372,12 +407,9 @@
         }
 
         ctx.fill();
-
-        // Subtle satin highlight along the petal edge
         ctx.strokeStyle = 'rgba(255, 240, 220, 0.18)';
         ctx.lineWidth = 0.6;
         ctx.stroke();
-
         ctx.restore();
       }
     }
@@ -435,7 +467,7 @@
       document.getElementById('curtain-guest-name').textContent = guestName;
       document.getElementById('hero-guest-name').textContent = guestName;
       document.getElementById('inline-guest-name').textContent = guestName;
-      document.title = `Invitation for ${guestName} — Neil & Ami`;
+      document.title = `Invitation for ${guestName} — Dr. Neil & Dr. Ami`;
     }
 
     // =========================================================
@@ -470,7 +502,7 @@
         const msg =
           `|| Shree Ganeshay Namah ||\n\n` +
           `Dear ${name},\n` +
-          `We warmly invite you to the God Dhana Ceremony of *Neil Sathwara & Ami Darji* on *3rd December 2026 at 10:00 AM* in *Mehdav, Gujarat*.\n\n` +
+          `We warmly invite you to the God Dhana Ceremony of *Dr. Neil Sathwara & Dr. Ami Darji* on *3rd December 2026 at 10:00 AM* in *Mehdav, Gujarat*.\n\n` +
           `Open your personal invitation here:\n${link}`;
         window.open(`https://wa.me/?text=${encodeURIComponent(msg)}`, '_blank');
       });
@@ -534,7 +566,7 @@
     document.getElementById('enter-btn').addEventListener('click', () => {
       curtain.classList.add('open');
       if (!isPlaying) startMusic();
-      triggerFlowerShower(95); // Lush realistic rose & marigold shower on open
+      triggerFlowerShower(95);
       spawnBurst(20);
       setTimeout(() => (curtain.style.display = 'none'), 1400);
     });
@@ -552,7 +584,7 @@
 
       blessMsg.textContent = guestName
         ? `Thank you for your warm blessings, ${guestName}!`
-        : 'Thank you for showering your warm blessings on Neil & Ami!';
+        : 'Thank you for showering your warm blessings on Dr. Neil & Dr. Ami!';
       blessMsg.classList.add('show');
     });
 
@@ -592,7 +624,7 @@
     setInterval(tickCountdown, 1000);
 
     // =========================================================
-    // 10. 3D ROYAL COVERFLOW PHOTO DECK + SWIPE + LIGHTBOX
+    // 10. 3D ROYAL COVERFLOW PHOTO DECK (9 PHOTOS) + LIGHTBOX
     // =========================================================
     const cards = Array.from(document.querySelectorAll('.deck-card'));
     const dotsContainer = document.getElementById('deck-dots');
@@ -624,7 +656,8 @@
         else if (offset === 1) card.classList.add('next');
         else if (offset === total - 1) card.classList.add('prev');
         else if (offset === 2) card.classList.add('far-next');
-        else card.classList.add('far-prev');
+        else if (offset === total - 2) card.classList.add('far-prev');
+        else card.classList.add('hidden-card');
       });
       dots.forEach((d, i) => d.classList.toggle('active', i === currentIdx));
     }
@@ -690,12 +723,12 @@
       const ics = [
         'BEGIN:VCALENDAR',
         'VERSION:2.0',
-        'PRODID:-//Neil & Ami God Dhana//EN',
+        'PRODID:-//Dr. Neil & Dr. Ami God Dhana//EN',
         'BEGIN:VEVENT',
         'DTSTART:20261203T043000Z',
         'DTEND:20261203T083000Z',
-        'SUMMARY:God Dhana Ceremony — Neil Sathwara & Ami Darji',
-        'DESCRIPTION:God Dhana Ceremony of Neil Sathwara & Ami Darji.',
+        'SUMMARY:God Dhana Ceremony — Dr. Neil Sathwara & Dr. Ami Darji',
+        'DESCRIPTION:God Dhana Ceremony of Dr. Neil Sathwara & Dr. Ami Darji.',
         'LOCATION:Mehdav, Gujarat',
         'END:VEVENT',
         'END:VCALENDAR'
@@ -704,7 +737,7 @@
       const url = URL.createObjectURL(blob);
       const a = document.createElement('a');
       a.href = url;
-      a.download = 'Neil-and-Ami-God-Dhana.ics';
+      a.download = 'Dr-Neil-and-Dr-Ami-God-Dhana.ics';
       a.click();
       URL.revokeObjectURL(url);
     });
