@@ -868,3 +868,88 @@ body {
   .luxury-footer { padding: 2.5rem 1rem 4.5rem; }
   .footer-script { font-size: 2.6rem; }
 }
+
+/* =========================================================
+   FAMILY MEMBERS LIST (FOOTER)
+   ========================================================= */
+.family-card {
+  max-width: 720px;
+  margin: 1.8rem auto 1.6rem;
+  padding: 1.8rem 1.4rem;
+  background: var(--bg-glass);
+  border: 1px solid var(--border-gold);
+  border-radius: 18px;
+  backdrop-filter: blur(12px);
+}
+
+.family-kicker {
+  display: block;
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  color: var(--gold-main);
+}
+
+.family-divider {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.75rem;
+  max-width: 160px;
+  margin: 0.65rem auto 1.25rem;
+  color: var(--gold-main);
+  font-size: 0.85rem;
+}
+
+.family-divider::before,
+.family-divider::after {
+  content: '';
+  flex: 1;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--gold-main), transparent);
+}
+
+.family-list {
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.75rem 1.5rem;
+  text-align: center;
+}
+
+.family-list li {
+  font-family: 'Bodoni Moda', serif;
+  font-size: 1.05rem;
+  color: var(--ivory);
+  letter-spacing: 0.3px;
+  padding: 0.35rem 0.4rem;
+  border-bottom: 1px solid rgba(212, 175, 55, 0.14);
+}
+
+.family-list li:nth-last-child(-n+2) {
+  border-bottom: none;
+}
+
+@media (max-width: 640px) {
+  .family-card {
+    padding: 1.4rem 1rem;
+    margin: 1.4rem auto 1.3rem;
+  }
+
+  .family-list {
+    grid-template-columns: 1fr;
+    gap: 0.55rem;
+  }
+
+  .family-list li {
+    font-size: 0.98rem;
+  }
+
+  .family-list li:nth-last-child(2) {
+    border-bottom: 1px solid rgba(212, 175, 55, 0.14);
+  }
+
+  .family-list li:last-child {
+    border-bottom: none;
+  }
+}
